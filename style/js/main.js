@@ -1,54 +1,26 @@
-/* ===================================================================
- * Ethos 1.0.0 - Main JS
- *
- * ------------------------------------------------------------------- */
-
 (function($) {
-
     "use strict";
     
     const cfg = {
-                scrollDuration : 800, // smoothscroll duration
-                mailChimpURL   : ''   // mailchimp url
-                };
+        scrollDuration : 800,
+        mailChimpURL   : ''
+    };
     const $WIN = $(window);
-
-
-    // Add the User Agent to the <html>
-    // will be used for IE10/IE11 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0; rv:11.0))
     const doc = document.documentElement;
     doc.setAttribute('data-useragent', navigator.userAgent);
 
-
-
-   /* preloader
-    * -------------------------------------------------- */
     const ssPreloader = function() {
-
         $("html").addClass('ss-preload');
-
         $WIN.on('load', function() {
-
-            // force page scroll position to top at page refresh
             $('html, body').animate({ scrollTop: 0 }, 'normal');
-
-            // will first fade out the loading animation 
             $("#loader").fadeOut("slow", function() {
-                // will fade out the whole DIV that covers the website.
                 $("#preloader").delay(300).fadeOut("slow");
             }); 
-            
-            // for hero content animations 
             $("html").removeClass('ss-preload');
             $("html").addClass('ss-loaded');
-
         });
     };
 
-
-
-   /* pretty print
-    * -------------------------------------------------- */
     const ssPrettyPrint = function() {
         $('pre').addClass('prettyprint');
         $( document ).ready(function() {
@@ -56,19 +28,15 @@
         });
     };
 
-
-
-   /* move header
-    * -------------------------------------------------- */
     const ssMoveHeader = function () {
-
         const $hero = $('.s-hero'),
-              $hdr = $('.s-header'),
-              triggerHeight = $hero.outerHeight() - 170;
+            $hdr = $('.s-header'),
+            triggerHeight = $hero.outerHeight() - 170
+        ; //oui je sais c'est putain de moche
 
 
         $WIN.on('scroll', function () {
-
+            //ça aussi d'ailleurs
             let loc = $WIN.scrollTop();
 
             if (loc > triggerHeight) {
@@ -93,12 +61,7 @@
 
     };
 
-
-
-   /* mobile menu
-    * ---------------------------------------------------- */ 
     const ssMobileMenu = function() {
-
         const $toggleButton = $('.header-menu-toggle');
         const $headerContent = $('.header-content');
         const $siteBody = $("body");
@@ -110,8 +73,6 @@
         });
 
         $headerContent.find('.header-nav a, .btn').on("click", function() {
-
-            // at 900px and below
             if (window.matchMedia('(max-width: 900px)').matches) {
                 $toggleButton.toggleClass('is-clicked');
                 $siteBody.toggleClass('menu-is-open');
@@ -119,8 +80,6 @@
         });
 
         $WIN.on('resize', function() {
-
-            // above 900px
             if (window.matchMedia('(min-width: 901px)').matches) {
                 if ($siteBody.hasClass("menu-is-open")) $siteBody.removeClass("menu-is-open");
                 if ($toggleButton.hasClass("is-clicked")) $toggleButton.removeClass("is-clicked");
@@ -129,45 +88,34 @@
 
     };
 
-
-   /* accordion
-    * ------------------------------------------------------ */
     const ssAccordion = function() {
-
         const $allItems = $('.services-list__item');
         const $allPanels = $allItems.children('.services-list__item-body');
 
         $allPanels.slice(1).hide();
 
         $allItems.on('click', '.services-list__item-header', function() {
-
             const $this = $(this),
                   $curItem = $this.parent(),
                   $curPanel =  $this.next();
 
-            if(!$curItem.hasClass('is-active')){
+            if (!$curItem.hasClass('is-active')){
                 $allPanels.slideUp();
                 $curPanel.slideDown();
                 $allItems.removeClass('is-active');
                 $curItem.addClass('is-active');
             }
-            
             return false;
         });
     };
 
-
-
-   /* photoswipe
-    * ----------------------------------------------------- */
     const ssPhotoswipe = function() {
         const items = [],
             $pswp = $('.pswp')[0],
             $folioItems = $('.folio-item');
 
-        // get items
+        // on get les items, j'fais ça à la rache nsm
         $folioItems.each( function(i) {
-
             let $folio = $(this),
                 $thumbLink =  $folio.find('.folio-item__thumb-link'),
                 $title = $folio.find('.folio-item__title'),
@@ -180,9 +128,9 @@
                 $height = $size[1];
         
             let item = {
-                src  : $href,
-                w    : $width,
-                h    : $height
+                src: $href,
+                w: $width,
+                h: $height
             }
 
             if ($caption.length > 0) {
@@ -192,9 +140,8 @@
             items.push(item);
         });
 
-        // bind click event
+        // on bind le click event (btw je t'expliquerais en voc comment ça marche Raphael
         $folioItems.each(function(i) {
-
             $(this).find('.folio-item__thumb-link').on('click', function(e) {
                 e.preventDefault();
                 let options = {
@@ -202,20 +149,13 @@
                     showHideOpacity: true
                 }
 
-                // initialize PhotoSwipe
                 let lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
                 lightBox.init();
             });
-
         });
     };
 
-
-
-   /* slick slider
-    * ------------------------------------------------------ */
     const ssSlickSlider = function() {
-            
         $('.testimonial-slider').slick({
             arrows: false,
             dots: true,
@@ -231,8 +171,7 @@
                         slidesToShow: 2,
                         slidesToScroll: 1
                     }
-                },
-                {
+                }, {
                     breakpoint: 800,
                     settings: {
                         slidesToShow: 1,
@@ -243,11 +182,7 @@
         });
     };
 
-
-   /* Animate On Scroll
-    * ------------------------------------------------------ */
     const ssAOS = function() {
-        
         AOS.init( {
             offset: 100,
             duration: 600,
@@ -259,27 +194,16 @@
 
     };
 
-
-
-   /* alert boxes
-    * ------------------------------------------------------ */
     const ssAlertBoxes = function() {
-
         $('.alert-box').on('click', '.alert-box__close', function() {
             $(this).parent().fadeOut(500);
-        }); 
-
+        });
     };
 
-    
-   /* smooth scrolling
-    * ------------------------------------------------------ */
     const ssSmoothScroll = function() {
-        
         $('.smoothscroll').on('click', function (e) {
             const target = this.hash;
             const $target = $(target);
-            
             e.preventDefault();
             e.stopPropagation();
 
@@ -289,18 +213,12 @@
                 window.location.hash = target;
             });
         });
-
     };
 
 
-   /* back to top
-    * ------------------------------------------------------ */
     const ssBackToTop = function() {
-        
         const pxShow = 800;
         const $goTopButton = $(".ss-go-top")
-
-        // Show or hide the button
         if ($(window).scrollTop() >= pxShow) $goTopButton.addClass('link-is-visible');
 
         $(window).on('scroll', function() {
@@ -312,12 +230,8 @@
         });
     };
 
-
-
-   /* initialize
-    * ------------------------------------------------------ */
+    //fonction init, sacrément moche btw
     (function ssInit() {
-
         ssPreloader();
         ssPrettyPrint();
         ssMoveHeader();
@@ -329,7 +243,7 @@
         ssAlertBoxes();
         ssSmoothScroll();
         ssBackToTop();
-
     })();
-
 })(jQuery);
+
+// après 2 semaines a avoir fait du js et du jquery, neptune mourut d'une crise cardiaque à cause de ce langage de merde

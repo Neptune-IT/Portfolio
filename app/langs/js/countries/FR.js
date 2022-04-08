@@ -4,7 +4,7 @@ export const FR_MESSAGES = {
     "NAV_PROJECTS": "Projets",
     "NAV_CONTACTS": "Contactes",
 
-    "HOME_PRESENTATION_TEXT": "Salut, je suis Neptune,<br>un jeune développeur backend <br>& un passioné de cyber-sécurité.",
+    "HOME_PRESENTATION_TEXT": "Juste un passionné d'informatique<br>qui poursuit ses rêves....",
 
     "ABOUT_TITLE": "A Propos de Moi",
     "ABOUT_SUBTITLE": "J'adore découvrir et apprendre de nouvelles choses.",

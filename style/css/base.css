@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Gothic+A1:300,300i,400,400i,500,500i,600,600i,700,700i|Martel:300,300i,400,400i,700,700i,900,900i|Work+Sans:600,700&display=swap");
 
 html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -20,14 +20,14 @@ h1 {
 
 hr {
     -webkit-box-sizing: content-box;
-    box-sizing: content-box; /* 1 */
-    height: 0; /* 1 */
-    overflow: visible; /* 2 */
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
 }
 
 pre {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    font-size: 1em;
 }
 
 a {
@@ -35,10 +35,10 @@ a {
 }
 
 abbr[title] {
-    border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
+    border-bottom: none;
+    text-decoration: underline;
     -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted; /* 2 */
+    text-decoration: underline dotted;
 }
 
 b, strong {
@@ -46,8 +46,8 @@ b, strong {
 }
 
 code, kbd, samp {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
+    font-family: monospace, monospace;
+    font-size: 1em;
 }
 
 small {
@@ -280,7 +280,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
 }
 
 .row.row-nowrap {
-    -ms-flex-wrap: none;
+    -ms-flex-wrap: none; /** c'est quoi cette erreur de merde encore phpstorm ? */
     flex-wrap: nowrap;
 }
 
@@ -472,7 +472,7 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
     max-width: 100%;
 }
 
-
+/** bon, on va comencer la responsive, ça va être vraiment chiant */
 @media screen and (max-width: 1200px) {
     .row .row {
         margin-left: -16px;

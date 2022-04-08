@@ -5,6 +5,7 @@
     require_once $_SERVER["DOCUMENT_ROOT"] . "/app/projects/ProjectsManager.php";
     require_once $_SERVER["DOCUMENT_ROOT"] . "/app/langs/php/LangTranslator.php";
     __load_projects();
+    $backgound_id = mt_rand(0, 11);
     if (!isset($_COOKIE["lang"])) setcookie("lang", "english", time() + 60 * 60 * 24 * 30);
 ?>
 
@@ -22,7 +23,7 @@
         <meta property="og:description" content="Neptune's portfolio website.">
         <meta name="author" content="Neptune">
 
-        <!-- CSS Style -->
+        <!-- CSS Style & JS de Merde -->
         <link rel="stylesheet" href="style/css/base.css">
         <link rel="stylesheet" href="style/css/main.css">
         <link rel="stylesheet" href="style/css/vendor.css">
@@ -85,6 +86,10 @@
                         document.getElementById('NAV_PROJECTS').innerHTML = translate("NAV_PROJECTS", lang);
                         document.getElementById('NAV_CONTACTS').innerHTML = translate("NAV_CONTACTS", lang);
                         document.getElementById('HOME_PRESENTATION_TEXT').innerHTML = translate("HOME_PRESENTATION_TEXT", lang);
+
+                        document.getElementById('SKILLS_TITLE').innerHTML = translate("SKILLS_TITLE", lang);
+                        document.getElementById('SKILLS_SUBTITLE').innerHTML = translate("SKILLS_SUBTITLE", lang);
+
                         document.getElementById('ABOUT_TITLE').innerHTML = translate("ABOUT_TITLE", lang);
                         document.getElementById('ABOUT_SUBTITLE').innerHTML = translate("ABOUT_SUBTITLE", lang);
                         document.getElementById('ABOUT_PROFILE_TITLE').innerHTML = translate("ABOUT_PROFILE_TITLE", lang);
@@ -97,10 +102,10 @@
                     });
                 </script>
             </div>
-            <a class="header-menu-toggle" href="#0"><span> Menu </span></a>
+            <a class="header-menu-toggle" href=""><span> Menu </span></a>
         </header>
 
-        <section id="home" class="s-hero target-section" data-parallax="scroll" data-image-src="images/background.jpg" data-natural-width=3840 data-natural-height=2160 data-position-y=center>
+        <section id="home" class="s-hero target-section" data-parallax="scroll" data-image-src='<?php echo "images/backgrounds/background{$backgound_id}.jpg"; ?>' data-natural-width=3840 data-natural-height=2160 data-position-y=center>
             <div class="row hero-content">
                 <div class="column large-full">
                     <h1 id="HOME_PRESENTATION_TEXT">
@@ -147,10 +152,46 @@
             </div>
         </section>
 
+        <section id="skills" class="s-about target-section">
+            <div class="s-about__section s-about__section--profile">
+                <div class="row">
+                    <div class="column large-6 medium-8 tab-full">
+                        <div class="section-intro" data-num="02" data-aos="fade-up">
+                            <h3 id="SKILLS_TITLE" class="subhead"> <?php echo translate("SKILLS_TITLE", $_COOKIE["lang"]); ?> </h3>
+                            <h1 id="SKILLS_SUBTITLE" class="display-1"> <?php echo translate("SKILLS_SUBTITLE", $_COOKIE["lang"]); ?> </h1>
+                        </div>
+
+                        <ul id="SKILLS" class="skill-bars" data-aos="fade-up">
+                            <li>
+                                <div class="progress percent85"><span>85%</span></div>
+                                <strong>HTML5</strong>
+                            </li>
+                            <li>
+                                <div class="progress percent80"><span>80%</span></div>
+                                <strong>CSS3</strong>
+                            </li>
+                            <li>
+                                <div class="progress percent95"><span>95%</span></div>
+                                <strong>PHP</strong>
+                            </li>
+                            <li>
+                                <div class="progress percent75"><span>75%</span></div>
+                                <strong>Python</strong>
+                            </li>
+                            <li>
+                                <div class="progress percent70"><span>70%</span></div>
+                                <strong>C</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="s-portfolio target-section">
             <div class="row s-portfolio__header">
                 <div class="column large-6 medium-8 tab-full">
-                    <div class="section-intro" data-num="02" data-aos="fade-up">
+                    <div class="section-intro" data-num="03" data-aos="fade-up">
                         <h3 id="PROJECTS_TITLE" class="subhead"> <?php echo translate("PROJECTS_TITLE", $_COOKIE["lang"]); ?> </h3>
                         <h1 id="PROJECTS_SUBTITLE" class="display-1">
                             <?php echo translate("PROJECTS_SUBTITLE", $_COOKIE["lang"]); ?>

@@ -9,7 +9,10 @@ interface EN {
         "NAV_PROJECTS" => "Projects",
         "NAV_CONTACTS" => "Contacts",
 
-        "HOME_PRESENTATION_TEXT" => "Hey, I'm Neptune,<br>a young backend developer <br>& cybersecurity lover.",
+        "HOME_PRESENTATION_TEXT" => "Just a computer-science enthusiast<br>who's following his dreams...",
+
+        "SKILLS_TITLE" => "My Skills",
+        "SKILLS_SUBTITLE" => "My currently skills bars",
 
         "ABOUT_TITLE" => "About Me",
         "ABOUT_SUBTITLE" => "I love discover & learn new things.",
@@ -20,7 +23,7 @@ interface EN {
         "PROJECTS_SUBTITLE" => "Here are my current projects :",
 
         "CONTACTS_TITLE" => "Contact me",
-        "CONTACTS_SUBTITLE" => "If you want to talk to me for any reason or you want some help, contact me :",
+        "CONTACTS_SUBTITLE" => "If you wanna talk to me for any reason or you want some help, contact me :",
 
         "FOOTER" => "Developed by Neptune & helped by randoms guys on internet."
 
