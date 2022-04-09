@@ -37,6 +37,11 @@
                 <div></div>
                 <div></div>
             </div>
+            <script>
+                setTimeout(function (){
+                    document.getElementById("preloader").remove();
+                }, 1500);
+            </script>
         </div>
 
         <header class="s-header">
