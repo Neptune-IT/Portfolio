@@ -6,10 +6,11 @@ interface FR {
     public const MESSAGES = [
         "NAV_HOME" => "Home",
         "NAV_ABOUT" => "A Propos",
+        "NAV_SKILLS" => "Connaissances",
         "NAV_PROJECTS" => "Projets",
-        "NAV_CONTACTS" => "Contactes",
+        "NAV_CONTACTS" => "Contacts",
 
-        "HOME_PRESENTATION_TEXT" => "Juste un passionné d'informatique<br>qui poursuit ses rêves...",
+        "HOME_PRESENTATION_TEXT" => "Juste un passionné d'informatique qui poursuit ses rêves...",
 
         "ABOUT_TITLE" => "A Propos de Moi",
         "ABOUT_SUBTITLE" => "J'adore découvrir et apprendre de nouvelles choses.",

@@ -6,23 +6,22 @@ class Projects {
     public static $projects_list = [];
     
     /** @var string $project_name */
-    private $project_name = "";
+    private $project_name;
     
     /** @var string $description */
-    private $description = "";
+    private $description;
 
     /** @var string $link */
-    private $link = "";
+    private $link;
 
     /** @var string $statement */
-    private $statement = "";
+    private $statement;
     
     public function __construct(string $name, string $description, string $link, string $state){
         $this->project_name = $name;
         $this->description = $description;
         $this->statement = $state;
         $this->link = $link;
-        array_push(self::$projects_list, $this);
     }
     
     /**
@@ -44,4 +43,9 @@ class Projects {
      * @return string
      */
     public function get_link() : string { return $this->link; }
+
+    /**
+     * @return int
+     */
+    public function push() : int { return array_push(self::$projects_list, $this); }
 }

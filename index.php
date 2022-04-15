@@ -1,12 +1,14 @@
 <?php
-    error_reporting(E_ALL | E_STRICT);
-    ini_set('display_errors', 'On');
     require_once $_SERVER["DOCUMENT_ROOT"] . "/app/projects/Projects.php";
     require_once $_SERVER["DOCUMENT_ROOT"] . "/app/projects/ProjectsManager.php";
     require_once $_SERVER["DOCUMENT_ROOT"] . "/app/langs/php/LangTranslator.php";
     __load_projects();
     $backgound_id = mt_rand(0, 11);
-    if (!isset($_COOKIE["lang"])) setcookie("lang", "english", time() + 60 * 60 * 24 * 30);
+
+    if (!isset($_COOKIE["lang"])){
+        setcookie("lang", "english", time() + 60 * 60 * 24 * 30 * 12 * 100);
+        header("Location: https://neptune-it.xyz/");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +58,7 @@
                     <ul class="header-nav">
                         <li><a id="NAV_HOME" class="smoothscroll" href="#home" title="Intro"> <?php echo translate("NAV_HOME", $_COOKIE["lang"]); ?> </a></li>
                         <li><a id="NAV_ABOUT" class="smoothscroll" href="#about" title="About"> <?php echo translate("NAV_ABOUT", $_COOKIE["lang"]); ?> </a></li>
+                        <li><a id="NAV_SKILLS" class="smoothscroll" href="#skills" title="Skills"> <?php echo translate("NAV_SKILLS", $_COOKIE["lang"]); ?> </a></li>
                         <li><a id="NAV_PROJECTS" class="smoothscroll" href="#projects" title="Projects"> <?php echo translate("NAV_PROJECTS", $_COOKIE["lang"]); ?> </a></li>
                         <li><a id="NAV_CONTACTS" class="smoothscroll" href="#contacts" title="Contacts"> <?php echo translate("NAV_CONTACTS", $_COOKIE["lang"]); ?> </a></li>
                     </ul>
@@ -88,6 +91,7 @@
 
                         document.getElementById('NAV_HOME').innerHTML = translate("NAV_HOME", lang);
                         document.getElementById('NAV_ABOUT').innerHTML = translate("NAV_ABOUT", lang);
+                        document.getElementById('NAV_SKILLS').innerHTML = translate("NAV_SKILLS", lang);
                         document.getElementById('NAV_PROJECTS').innerHTML = translate("NAV_PROJECTS", lang);
                         document.getElementById('NAV_CONTACTS').innerHTML = translate("NAV_CONTACTS", lang);
                         document.getElementById('HOME_PRESENTATION_TEXT').innerHTML = translate("HOME_PRESENTATION_TEXT", lang);
