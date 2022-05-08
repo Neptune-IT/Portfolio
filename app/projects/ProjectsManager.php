@@ -7,7 +7,7 @@ function __load_projects(){
         "ARS-Crypter" => [
             "description" => "ARS Crypter is my own cryptage system based on Caesar's Cipher.",
             "link" => "https://github.com/Neptune-IT/ARS_SHELL_CRYPT",
-            "statement" => "Finish"
+            "statement" => "Completed"
         ],
         "Lets-Freerun" => [
             "description" => "Lets-Freerun is a website which gather a lot of parkour spots around the world.",
@@ -27,12 +27,12 @@ function __load_projects(){
         "Séléné" => [
             "description" => "Séléné is a database table data extractor written in Python3.",
             "link" => "https://github.com/Neptune-IT/Selene",
-            "statement" => "Finish"
+            "statement" => "Completed"
         ],
         "Kleptes" => [
             "description" => "Kleptes is a free and open system to grab ip and stock it in database written in PHP 7.4.",
             "link" => "https://github.com/Neptune-IT/Kleptes",
-            "statement" => "Finish"
+            "statement" => "Completed"
         ]
     ];
     foreach ($projects as $name => $data){
