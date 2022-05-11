@@ -40,9 +40,9 @@
                 <div></div>
             </div>
             <script>
-                setTimeout(function (){
+                /*setTimeout(function (){
                     document.getElementById("preloader").remove();
-                }, 1500);
+                }, 1500);*/
             </script>
         </div>
 
@@ -276,7 +276,7 @@
 
             <div class="row s-footer__bottom">
                 <div class="column large-full ss-copyright">
-                    <span> © Copyright Neptune 2021 </span>
+                    <span> © Copyright Neptune 2022 </span>
                     <span id="FOOTER"> <?php echo translate("FOOTER", $_COOKIE["lang"]); ?> </span>
                 </div>
 
