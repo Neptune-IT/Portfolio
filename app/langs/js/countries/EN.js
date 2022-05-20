@@ -19,7 +19,7 @@ export const EN_MESSAGES = {
     "PROJECTS_SUBTITLE": "Discover what I’ve been working on",
 
     "CONTACTS_TITLE": "Contact me",
-    "CONTACTS_SUBTITLE": "If you wanna talk to me for any reason or you want some help, contact me :",
+    "CONTACTS_SUBTITLE": "If you wanna chat for any reason or need some help, contact me :",
 
     "FOOTER": "Made by Neptune with the help of random guys on internet."
 };
