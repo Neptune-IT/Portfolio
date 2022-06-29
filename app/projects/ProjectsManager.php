@@ -1,11 +1,11 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/app/projects/Projects.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/projects/Projects.php";
 
 function __load_projects(){
     $projects = [
-        "ARS_SHELL_CRYPT" => [
-            "description" => "ARS_SHELL_CRYPT is a modified caesar's-cipher-based encrypt system written in C++.",
+        "ARS-SHELL-CRYPT" => [
+            "description" => "ARS-SHELL-CRYPT is a modified caesar's-cipher-based encrypt system written in C++.",
             "link" => "https://github.com/Neptune-IT/ARS_SHELL_CRYPT",
             "statement" => "Completed"
         ],

@@ -14,7 +14,7 @@ interface FR {
 
         "ABOUT_TITLE" => "A Propos de Moi",
         "ABOUT_SUBTITLE" => "J'adore découvrir et apprendre de nouvelles choses.",
-        "ABOUT_PROFILE_TITLE" => "Profile",
+        "ABOUT_PROFILE_TITLE" => "Profil",
         "ABOUT_PROFILE_TEXT" => "J'ai débuté la programmation quand j'avais onze ans. Depuis ce moment, j'ai appris pas mal de langages web comme par exemple le PHP, le Javascript, le Ruby ou encore quelques frameworks utiles. Ce n'est que récemment que j'ai développé une réelle passion pour la cyber-sécurité et plus précisement le pentesting. Je me suis concentré sur le Python et le C pendant deux ans et j'apprends maintenant les réseaux.",
 
         "SKILLS_TITLE" => "Mes Connaissances",
