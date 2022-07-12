@@ -6,7 +6,7 @@
     $backgound_id = mt_rand(0, 11);
 
     if (!isset($_COOKIE["lang"])){
-        $_COOKIE["lang"] = "spanish";
+        $_COOKIE["lang"] = "english";
         setcookie("lang", "english", time() + 60 * 60 * 24 * 30 * 12 * 100);
     }
 ?>
