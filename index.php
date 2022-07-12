@@ -1,7 +1,7 @@
 <?php
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/projects/Projects.php";
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/projects/ProjectsManager.php";
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/langs/php/LangTranslator.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/projects/Projects.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/projects/ProjectsManager.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/LangTranslator.php";
     __load_projects();
     $backgound_id = mt_rand(0, 11);
 
@@ -65,21 +65,21 @@
                 </nav>
                 <select class="btn btn--stroke btn--small" id="language-changer">
                     <?php if ($_COOKIE["lang"] === "english"): ?>
-                        <option value="english" id="LANG_ENGLISH"> English </option>
-                        <option value="french" id="LANG_FRENCH"> French </option>
-                        <option value="spanish" id="LANG_SPANISH"> Spanish </option>
+                        <option value="english" id="LANG_ENGLISH"> <?php echo translate("LANG_ENGLISH", $_COOKIE["lang"]); ?> </option>
+                        <option value="french" id="LANG_FRENCH"> <?php echo translate("LANG_FRENCH", $_COOKIE["lang"]); ?> </option>
+                        <option value="spanish" id="LANG_SPANISH"> <?php echo translate("LANG_SPANISH", $_COOKIE["lang"]); ?> </option>
                     <?php elseif ($_COOKIE["lang"] === "french"): ?>
-                        <option value="french"> Français </option>
-                        <option value="english"> Anglais </option>
-                        <option value="spanish"> Espagnol </option>
+                        <option value="french" id="LANG_FRENCH"> <?php echo translate("LANG_FRENCH", $_COOKIE["lang"]); ?> </option>
+                        <option value="english" id="LANG_ENGLISH"> <?php echo translate("LANG_ENGLISH", $_COOKIE["lang"]); ?> </option>
+                        <option value="spanish" id="LANG_SPANISH"> <?php echo translate("LANG_SPANISH", $_COOKIE["lang"]); ?> </option>
                     <?php elseif ($_COOKIE["lang"] === "spanish"): ?>
-                        <option value="spanish"> Espanol </option>
-                        <option value="french"> Frances </option>
-                        <option value="english"> Ingles </option>
+                        <option value="spanish" id="LANG_SPANISH"> <?php echo translate("LANG_SPANISH", $_COOKIE["lang"]); ?> </option>
+                        <option value="french" id="LANG_FRENCH"> <?php echo translate("LANG_FRENCH", $_COOKIE["lang"]); ?> </option>
+                        <option value="english" id="LANG_ENGLISH"> <?php echo translate("LANG_ENGLISH", $_COOKIE["lang"]); ?> </option>
                     <?php else: ?>
-                        <option value="english"> English </option>
-                        <option value="french"> French </option>
-                        <option value="spanish"> Spanish </option>
+                        <option value="english" id="LANG_ENGLISH"> <?php echo translate("LANG_ENGLISH", $_COOKIE["lang"]); ?> </option>
+                        <option value="french" id="LANG_FRENCH"> <?php echo translate("LANG_FRENCH", $_COOKIE["lang"]); ?> </option>
+                        <option value="spanish" id="LANG_SPANISH"> <?php echo translate("LANG_SPANISH", $_COOKIE["lang"]); ?> </option>
                     <?php endif; ?>
                 </select>
                 <script type="module">

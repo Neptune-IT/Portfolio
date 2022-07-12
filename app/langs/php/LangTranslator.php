@@ -1,8 +1,8 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/langs/php/countries/FR.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/langs/php/countries/EN.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/langs/php/countries/SPA.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/countries/FR.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/countries/EN.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/countries/SPA.php";
 
 /**
  * @param string $identifier

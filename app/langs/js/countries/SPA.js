@@ -1,4 +1,8 @@
 export const SPA_MESSAGES = {
+    "LANG_ENGLISH": "Ingles",
+    "LANG_FRENCH": "Frances",
+    "LANG_SPANISH": "Espanol",
+
     "NAV_HOME": "Home",
     "NAV_ABOUT": "Sobre Me",
     "NAV_SKILLS": "Habilidades",

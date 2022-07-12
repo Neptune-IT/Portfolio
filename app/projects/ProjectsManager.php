@@ -1,6 +1,6 @@
 <?php
 
-require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/projects/Projects.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/projects/Projects.php";
 
 function __load_projects(){
     $projects = [

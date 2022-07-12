@@ -4,6 +4,10 @@ interface EN {
 
     /** @var string[] MESSAGES */
     public const MESSAGES = [
+        "LANG_ENGLISH" => "English",
+        "LANG_FRENCH" => "French",
+        "LANG_SPANISH" => "Spanish",
+
         "NAV_HOME" => "Home",
         "NAV_ABOUT" => "About",
         "NAV_SKILLS" => "Skills",

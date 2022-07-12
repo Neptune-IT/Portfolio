@@ -1,6 +1,10 @@
 import { translate } from "./js/LangTranslator.js";
 
 export function change(lang) {
+    document.getElementById('LANG_ENGLISH').innerHTML = translate("LANG_ENGLISH", lang);
+    document.getElementById('LANG_FRENCH').innerHTML = translate("LANG_FRENCH", lang);
+    document.getElementById('LANG_SPANISH').innerHTML = translate("LANG_SPANISH", lang);
+
     document.getElementById('NAV_HOME').innerHTML = translate("NAV_HOME", lang);
     document.getElementById('NAV_ABOUT').innerHTML = translate("NAV_ABOUT", lang);
     document.getElementById('NAV_SKILLS').innerHTML = translate("NAV_SKILLS", lang);
