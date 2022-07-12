@@ -1,12 +1,12 @@
 <?php
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/projects/Projects.php";
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/projects/ProjectsManager.php";
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/LangTranslator.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/projects/Projects.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/projects/ProjectsManager.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolioo/app/langs/php/LangTranslator.php";
     __load_projects();
     $backgound_id = mt_rand(0, 11);
 
     if (!isset($_COOKIE["lang"])){
-        $_COOKIE["lang"] = "english";
+        $_COOKIE["lang"] = "spanish";
         setcookie("lang", "english", time() + 60 * 60 * 24 * 30 * 12 * 100);
     }
 ?>
@@ -65,17 +65,17 @@
                 </nav>
                 <select class="btn btn--stroke btn--small" id="language-changer">
                     <?php if ($_COOKIE["lang"] === "english"): ?>
-                        <option value="english"> English </option>
-                        <option value="french"> French </option>
-                        <option value="spanish"> Spanish </option>
+                        <option value="english" id="LANG_ENGLISH"> English </option>
+                        <option value="french" id="LANG_FRENCH"> French </option>
+                        <option value="spanish" id="LANG_SPANISH"> Spanish </option>
                     <?php elseif ($_COOKIE["lang"] === "french"): ?>
-                        <option value="french"> French </option>
-                        <option value="english"> English </option>
-                        <option value="spanish"> Spanish </option>
+                        <option value="french"> Français </option>
+                        <option value="english"> Anglais </option>
+                        <option value="spanish"> Espagnol </option>
                     <?php elseif ($_COOKIE["lang"] === "spanish"): ?>
-                        <option value="spanish"> Spanish </option>
-                        <option value="french"> French </option>
-                        <option value="english"> English </option>
+                        <option value="spanish"> Espanol </option>
+                        <option value="french"> Frances </option>
+                        <option value="english"> Ingles </option>
                     <?php else: ?>
                         <option value="english"> English </option>
                         <option value="french"> French </option>
@@ -83,31 +83,12 @@
                     <?php endif; ?>
                 </select>
                 <script type="module">
-                    import { translate } from "/app/langs/js/LangTranslator.js";
+                    import { change } from "./app/langs/changer.js";
 
                     document.getElementById('language-changer').addEventListener('change', function (e) {
                         const lang = e.target.value;
                         document.cookie = "lang=" + lang + "; expires=Thu, 31 Dec 2099 23:59:59 GMT";
-
-                        document.getElementById('NAV_HOME').innerHTML = translate("NAV_HOME", lang);
-                        document.getElementById('NAV_ABOUT').innerHTML = translate("NAV_ABOUT", lang);
-                        document.getElementById('NAV_SKILLS').innerHTML = translate("NAV_SKILLS", lang);
-                        document.getElementById('NAV_PROJECTS').innerHTML = translate("NAV_PROJECTS", lang);
-                        document.getElementById('NAV_CONTACTS').innerHTML = translate("NAV_CONTACTS", lang);
-                        document.getElementById('HOME_PRESENTATION_TEXT').innerHTML = translate("HOME_PRESENTATION_TEXT", lang);
-
-                        document.getElementById('SKILLS_TITLE').innerHTML = translate("SKILLS_TITLE", lang);
-                        document.getElementById('SKILLS_SUBTITLE').innerHTML = translate("SKILLS_SUBTITLE", lang);
-
-                        document.getElementById('ABOUT_TITLE').innerHTML = translate("ABOUT_TITLE", lang);
-                        document.getElementById('ABOUT_SUBTITLE').innerHTML = translate("ABOUT_SUBTITLE", lang);
-                        document.getElementById('ABOUT_PROFILE_TITLE').innerHTML = translate("ABOUT_PROFILE_TITLE", lang);
-                        document.getElementById('ABOUT_PROFILE_TEXT').innerHTML = translate("ABOUT_PROFILE_TEXT", lang);
-                        document.getElementById('PROJECTS_TITLE').innerHTML = translate("PROJECTS_TITLE", lang);
-                        document.getElementById('PROJECTS_SUBTITLE').innerHTML = translate("PROJECTS_SUBTITLE", lang);
-                        document.getElementById('CONTACTS_TITLE').innerHTML = translate("CONTACTS_TITLE", lang);
-                        document.getElementById('CONTACTS_SUBTITLE').innerHTML = translate("CONTACTS_SUBTITLE", lang);
-                        document.getElementById('FOOTER').innerHTML = translate("FOOTER", lang);
+                        change(lang);
                     });
                 </script>
             </div>
@@ -163,7 +144,7 @@
             <div class="s-about__section">
                 <div class="row">
                     <div class="column">
-                        <h3 data-aos="fade-up"> Career </h3>
+                        <h3 id="CAREER_TITLE" data-aos="fade-up"> <?php echo translate("CAREER_TITLE", $_COOKIE["lang"]); ?> </h3>
                     </div>
                 </div>
                 <div class="row block-large-1-2 block-900-full work-positions">
@@ -171,17 +152,15 @@
                         <div class="position">
                             <div class="position__header">
                                 <h6>
-                                    <span class="position__co"> Highschool </span>
-                                    <span class="position__pos"> 6th & 7th grade </span>
+                                    <span class="position__co" id="CAREER_COLUMN1_TITLE"> <?php echo translate("CAREER_COLUMN1_TITLE", $_COOKIE["lang"]); ?> </span>
+                                    <span class="position__pos" id="CAREER_COLUMN1_SUBTITLE"> <?php echo translate("CAREER_COLUMN1_SUBTITLE", $_COOKIE["lang"]); ?> </span>
                                 </h6>
-                                <div class="position__timeframe">
-                                    September 2016 - July 2018
+                                <div class="position__timeframe" id="CAREER_COLUMN1_DATE">
+                                    <?php echo translate("CAREER_COLUMN1_DATE", $_COOKIE["lang"]); ?>
                                 </div>
                             </div>
-                            <p>
-                                Started to learn HTML5 & CSS4 at eleven.
-                                It took me two years to master these languages and started to create my first website
-                                in August 2017.
+                            <p id="CAREER_COLUMN1_TEXT">
+                                <?php echo translate("CAREER_COLUMN1_TEXT", $_COOKIE["lang"]); ?>
                             </p>
                         </div>
                     </div>
@@ -189,17 +168,15 @@
                         <div class="position">
                             <div class="position__header">
                                 <h6>
-                                    <span class="position__co"> Highschool </span>
-                                    <span class="position__pos"> 8th & 9th grade </span>
+                                    <span class="position__co" id="CAREER_COLUMN2_TITLE"> <?php echo translate("CAREER_COLUMN2_TITLE", $_COOKIE["lang"]); ?> </span>
+                                    <span class="position__pos" id="CAREER_COLUMN2_SUBTITLE"> <?php echo translate("CAREER_COLUMN2_SUBTITLE", $_COOKIE["lang"]); ?> </span>
                                 </h6>
-                                <div class="position__timeframe">
-                                    September 2018 - July 2020
+                                <div class="position__timeframe" id="CAREER_COLUMN2_DATE">
+                                    <?php echo translate("CAREER_COLUMN2_DATE", $_COOKIE["lang"]); ?>
                                 </div>
                             </div>
-                            <p>
-                                During these two years, I could learn and practice PHP and Javascript. After mastering PHP,
-                                I was curious about web-related frameworks such as Symfony/Laravel for PHP and React/JQuery
-                                for Javascript. I also learned SQL with MySQL/MariaDB/MongoDB.
+                            <p id="CAREER_COLUMN2_TEXT">
+                                <?php echo translate("CAREER_COLUMN2_TEXT", $_COOKIE["lang"]); ?>
                             </p>
                         </div>
                     </div>
@@ -207,18 +184,15 @@
                         <div class="position">
                             <div class="position__header">
                                 <h6>
-                                    <span class="position__co"> Highschool </span>
-                                    <span class="position__pos"> 10th & 11th grade </span>
+                                    <span class="position__co" id="CAREER_COLUMN3_TITLE"> <?php echo translate("CAREER_COLUMN3_TITLE", $_COOKIE["lang"]); ?> </span>
+                                    <span class="position__pos" id="CAREER_COLUMN3_SUBTITLE"> <?php echo translate("CAREER_COLUMN3_SUBTITLE", $_COOKIE["lang"]); ?> </span>
                                 </h6>
-                                <div class="position__timeframe">
-                                    September 2020 - Present
+                                <div class="position__timeframe" id="CAREER_COLUMN3_DATE">
+                                    <?php echo translate("CAREER_COLUMN3_DATE", $_COOKIE["lang"]); ?>
                                 </div>
                             </div>
-                            <p>
-                                I discovered cyber-security field. I learned Python and C/C++ to master "programming
-                                part" of cyber-security. Then, I started to learn pentesting and computer networks.
-                                I finally created account in many websites, for instance HackTheBox/RootMe/VulnHub,
-                                to practice my skills.
+                            <p id="CAREER_COLUMN3_TEXT">
+                                <?php echo translate("CAREER_COLUMN3_TEXT", $_COOKIE["lang"]); ?>
                             </p>
                         </div>
                     </div>
@@ -226,16 +200,15 @@
                         <div class="position">
                             <div class="position__header">
                                 <h6>
-                                    <span class="position__co"> Hardware France </span>
-                                    <span class="position__pos"> Founder & Software engineer </span>
+                                    <span class="position__co" id="CAREER_COLUMN4_TITLE"> <?php echo translate("CAREER_COLUMN4_TITLE", $_COOKIE["lang"]); ?> </span>
+                                    <span class="position__pos" id="CAREER_COLUMN4_SUBTITLE"> <?php echo translate("CAREER_COLUMN4_SUBTITLE", $_COOKIE["lang"]); ?> </span>
                                 </h6>
-                                <div class="position__timeframe">
-                                    March 2021 - Present
+                                <div class="position__timeframe" id="CAREER_COLUMN4_DATE">
+                                    <?php echo translate("CAREER_COLUMN4_DATE", $_COOKIE["lang"]); ?>
                                 </div>
                             </div>
-                            <p>
-                                Actually founder of discord server and company named Hardware France which is to help people
-                                with their problems related to informatica stuffs such as hardware, software, programming etc.
+                            <p id="CAREER_COLUMN4_TEXT">
+                                <?php echo translate("CAREER_COLUMN4_TEXT", $_COOKIE["lang"]); ?>
                             </p>
                         </div>
                     </div>
