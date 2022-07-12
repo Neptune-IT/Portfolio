@@ -1,13 +1,13 @@
 <?php
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/app/projects/Projects.php";
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/app/projects/ProjectsManager.php";
-    require_once $_SERVER["DOCUMENT_ROOT"] . "/app/langs/php/LangTranslator.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/projects/Projects.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/projects/ProjectsManager.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/LangTranslator.php";
     __load_projects();
     $backgound_id = mt_rand(0, 11);
 
     if (!isset($_COOKIE["lang"])){
+        $_COOKIE["lang"] = "english";
         setcookie("lang", "english", time() + 60 * 60 * 24 * 30 * 12 * 100);
-        header("Location: https://neptune-it.xyz/");
     }
 ?>
 
@@ -156,6 +156,88 @@
                         <p id="ABOUT_PROFILE_TEXT" data-aos="fade-up">
                             <?php echo translate("ABOUT_PROFILE_TEXT", $_COOKIE["lang"]); ?>
                         </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="s-about__section">
+                <div class="row">
+                    <div class="column">
+                        <h3 data-aos="fade-up"> Career </h3>
+                    </div>
+                </div>
+                <div class="row block-large-1-2 block-900-full work-positions">
+                    <div class="column" data-aos="fade-up">
+                        <div class="position">
+                            <div class="position__header">
+                                <h6>
+                                    <span class="position__co"> Highschool </span>
+                                    <span class="position__pos"> 6th & 7th grade </span>
+                                </h6>
+                                <div class="position__timeframe">
+                                    September 2016 - July 2018
+                                </div>
+                            </div>
+                            <p>
+                                Started to learn HTML5 & CSS4 at eleven.
+                                It took me two years to master these languages and started to create my first website
+                                in August 2017.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column" data-aos="fade-up">
+                        <div class="position">
+                            <div class="position__header">
+                                <h6>
+                                    <span class="position__co"> Highschool </span>
+                                    <span class="position__pos"> 8th & 9th grade </span>
+                                </h6>
+                                <div class="position__timeframe">
+                                    September 2018 - July 2020
+                                </div>
+                            </div>
+                            <p>
+                                During these two years, I could learn and practice PHP and Javascript. After mastering PHP,
+                                I was curious about web-related frameworks such as Symfony/Laravel for PHP and React/JQuery
+                                for Javascript. I also learned SQL with MySQL/MariaDB/MongoDB.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column" data-aos="fade-up">
+                        <div class="position">
+                            <div class="position__header">
+                                <h6>
+                                    <span class="position__co"> Highschool </span>
+                                    <span class="position__pos"> 10th & 11th grade </span>
+                                </h6>
+                                <div class="position__timeframe">
+                                    September 2020 - Present
+                                </div>
+                            </div>
+                            <p>
+                                I discovered cyber-security field. I learned Python and C/C++ to master "programming
+                                part" of cyber-security. Then, I started to learn pentesting and computer networks.
+                                I finally created account in many websites, for instance HackTheBox/RootMe/VulnHub,
+                                to practice my skills.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column" data-aos="fade-up">
+                        <div class="position">
+                            <div class="position__header">
+                                <h6>
+                                    <span class="position__co"> Hardware France </span>
+                                    <span class="position__pos"> Founder & Software engineer </span>
+                                </h6>
+                                <div class="position__timeframe">
+                                    March 2021 - Present
+                                </div>
+                            </div>
+                            <p>
+                                Actually founder of discord server and company named Hardware France which is to help people
+                                with their problems related to informatica stuffs such as hardware, software, programming etc.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
