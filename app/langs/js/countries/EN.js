@@ -9,12 +9,12 @@ export const EN_MESSAGES = {
     "NAV_PROJECTS": "Projects",
     "NAV_CONTACTS": "Contacts",
 
-    "HOME_PRESENTATION_TEXT": "Just a computer science enthusiast following his dreams...",
+    "HOME_PRESENTATION_TEXT": "Just a computer science enthusiast following his dreams... ☁",
 
     "ABOUT_TITLE": "About Me",
     "ABOUT_SUBTITLE": "I enjoy discovering and learning new things.",
     "ABOUT_PROFILE_TITLE": "Profile",
-    "ABOUT_PROFILE_TEXT": "I started programming at eleven. Since then, I’ve learned a lot of web related languages such as PHP, JavaScript, Ruby and a few frameworks. Recently, I’ve been developing a huge interest in cyber-security and pentesting. I’ve been focusing on Python and C for the past two years, and I’m now learning Networks.",
+    "ABOUT_PROFILE_TEXT": "Got a huge interest for informatic since my childhood, I quickly developed skills for programming & cyber-security.<br><br>I'm also a Greek mythology & space-related stuff lover, I enjoy to document myself on these two fields.<br><br>I have plenty of projects & goals that I want to achieve and last but not least, I got money on my mind.",
 
     "CAREER_TITLE": "Career",
     "CAREER_COLUMN1_TITLE": "Highschool",

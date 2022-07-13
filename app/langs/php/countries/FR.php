@@ -14,12 +14,12 @@ interface FR {
         "NAV_PROJECTS" => "Projets",
         "NAV_CONTACTS" => "Contacts",
 
-        "HOME_PRESENTATION_TEXT" => "Juste un passionné d'informatique qui poursuit ses rêves...",
+        "HOME_PRESENTATION_TEXT" => "Juste un passionné d'informatique qui poursuit ses rêves... ☁",
 
         "ABOUT_TITLE" => "A Propos de Moi",
         "ABOUT_SUBTITLE" => "J'adore découvrir et apprendre de nouvelles choses.",
         "ABOUT_PROFILE_TITLE" => "Profil",
-        "ABOUT_PROFILE_TEXT" => "J'ai débuté la programmation quand j'avais onze ans. Depuis ce moment, j'ai appris pas mal de langages web comme par exemple le PHP, le Javascript, le Ruby ou encore quelques frameworks utiles. Ce n'est que récemment que j'ai développé une réelle passion pour la cyber-sécurité et plus précisement le pentesting. Je me suis concentré sur le Python et le C pendant deux ans et j'apprends maintenant les réseaux.",
+        "ABOUT_PROFILE_TEXT" => "J'ai développé un énorme intéret pour l'informatique dès mon plus jeune âge, j'ai donc rapidement développé de bonnes connaissances en programmation et cyber-sécurité.<br><br>Je suis aussi un passioné de mythologie Grecque et des notions reliées à l'espace, j'adore me documenter sur ces sujets.<br><br>J'ai énormément d'objectifs de vie et de projets que je compte réaliser et j'ai surtout une énorme soiffe d'argent.",
 
         "CAREER_TITLE" => "Carrière",
         "CAREER_COLUMN1_TITLE" => "Collège",

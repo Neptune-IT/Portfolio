@@ -271,7 +271,7 @@
                         <div class="column" data-aos="fade-up">
                             <div class="folio-item">
                                 <div class="folio-item__thumb">
-                                    <a class="folio-item__thumb-link" href="images/projects/' . strtolower($project->get_name()) . '.png" title="' . $project->get_name() . '" data-size="1920x1080">
+                                    <a class="folio-item__thumb-link" href="images/projects/' . strtolower($project->get_name()) . '.png" title="' . $project->get_name() . '" data-size="960x540">
                                         <img src="images/projects/' . strtolower($project->get_name()) . '.png" srcset="images/projects/' . strtolower($project->get_name()) . '.png 1x, images/projects/' . strtolower($project->get_name()) . '.png 2x" alt="">
                                     </a>
                                 </div>
@@ -279,7 +279,7 @@
                                     <div class="folio-item__cat">' . $project->get_statement() . '</div>
                                     <h4 class="folio-item__title">' . $project->get_name() . '</h4>
                                 </div>
-                                <a href="' . $project->get_link() . '" title="Project Link" class="folio-item__project-link"> Project Link </a>
+                                <a href="' . $project->get_link() . '" title="Project Link" class="folio-item__project-link" target="_blank"> Project Link </a>
                                 <div class="folio-item__caption">
                                     <p>' . $project->get_description() . '</p>
                                 </div>
