@@ -1,6 +1,6 @@
 import { EN_MESSAGES } from "./countries/EN.js";
 import { FR_MESSAGES } from "./countries/FR.js";
-import { SPA_MESSAGES } from "./countries/SPA.js";
+import { ES_MESSAGES } from "./countries/ES.js";
 
 export function translate(identifier, language) {
     switch (language) {
@@ -9,7 +9,7 @@ export function translate(identifier, language) {
         case "english":
             return EN_MESSAGES[identifier];
         case "spanish":
-            return SPA_MESSAGES[identifier];
+            return ES_MESSAGES[identifier];
         default:
             return EN_MESSAGES[identifier];
     }

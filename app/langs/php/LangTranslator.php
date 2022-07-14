@@ -2,7 +2,7 @@
 
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/countries/FR.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/countries/EN.php";
-require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/countries/SPA.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/Portfolio/app/langs/php/countries/ES.php";
 
 /**
  * @param string $identifier
@@ -18,7 +18,7 @@ function translate(string $identifier, string $language) : string {
         case "english":
             return EN::MESSAGES[$identifier];
         case "spanish":
-            return SPA::MESSAGES[$identifier];
+            return ES::MESSAGES[$identifier];
         default:
             return EN::MESSAGES[$identifier];
     }
