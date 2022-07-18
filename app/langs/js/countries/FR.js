@@ -20,7 +20,7 @@ export const FR_MESSAGES = {
     "CAREER_COLUMN1_TITLE": "Collège",
     "CAREER_COLUMN1_SUBTITLE": "6ème & 5ème",
     "CAREER_COLUMN1_DATE": "Septembre 2016 - Juillet 2018",
-    "CAREER_COLUMN1_TEXT": "J'ai commencé à apprendre HTML5 et CCS4 à 11 ans. Cela m'a prit deux ans pour maitriser ces deux langages puis j'ai créé mon premier site web en Aout 2017.",
+    "CAREER_COLUMN1_TEXT": "J'ai commencé à apprendre HTML5 et CCS3 à 11 ans. Cela m'a prit deux ans pour maitriser ces deux langages puis j'ai créé mon premier site web en Aout 2017.",
     "CAREER_COLUMN2_TITLE": "Collège",
     "CAREER_COLUMN2_SUBTITLE": "4ème & 3ème",
     "CAREER_COLUMN2_DATE": "Septembre 2018 - Juillet 2020",

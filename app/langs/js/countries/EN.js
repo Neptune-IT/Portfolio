@@ -20,7 +20,7 @@ export const EN_MESSAGES = {
     "CAREER_COLUMN1_TITLE": "Highschool",
     "CAREER_COLUMN1_SUBTITLE": "6th & 7th grade",
     "CAREER_COLUMN1_DATE": "September 2016 - July 2018",
-    "CAREER_COLUMN1_TEXT": "Started to learn HTML5 & CSS4 at eleven. It took me two years to master these languages and started to create my first website in August 2017.",
+    "CAREER_COLUMN1_TEXT": "Started to learn HTML5 & CSS3 at eleven. It took me two years to master these languages and started to create my first website in August 2017.",
     "CAREER_COLUMN2_TITLE": "Highschool",
     "CAREER_COLUMN2_SUBTITLE": "8th & 9th grade",
     "CAREER_COLUMN2_DATE": "September 2018 - July 2020",
